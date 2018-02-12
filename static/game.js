@@ -7,8 +7,9 @@ window.onload = function(){ //window load guard
 var socket = io()
 socket.on('message', function(data) {
   console.log(data);
-});
 
+});
+ console.log("this is a test")
 //GLOBAL VARS
 const canvas = document.getElementById("canvas")
 const context = canvas.getContext("2d")
