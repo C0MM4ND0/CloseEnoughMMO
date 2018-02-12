@@ -3,6 +3,12 @@
 window.onload = function(){ //window load guard
 
 
+//SOCKET OBSERVERS
+var client = io()
+socket.on('message', function(data) {
+  console.log(data);
+});
+
 //GLOBAL VARS
 const canvas = document.getElementById("canvas")
 const context = canvas.getContext("2d")
@@ -10,9 +16,6 @@ const context = canvas.getContext("2d")
 
 
 
-context.fillStyle="#000000";
-//coloring backgrounds
-context.fillRect(0,0,canvas.width,canvas.height)
 
 //observer for managing the size of the canvas
 function resizeCanvas() {
