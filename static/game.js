@@ -4,7 +4,7 @@ window.onload = function(){ //window load guard
 
 
 //SOCKET OBSERVERS
-var client = io()
+var socket = io()
 socket.on('message', function(data) {
   console.log(data);
 });
