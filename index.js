@@ -1,3 +1,6 @@
+//this class is the server class
+
+
 const serverJS = require('engine.io/lib/server.js')
 const PORT = process.env.PORT || 5000
 // Dependencies
@@ -17,6 +20,19 @@ app.get('/', function(request, response) {
 // Starts the server.
 server.listen(PORT, function() {
   console.log('Starting server on port ' +  PORT);
+});
+
+
+//SERVER SIDE CODE
+
+io.on('connection', function(socket) {
+
+	//RUNNING EACH INSTANCE FOR EVERY USER
+	
+
 
 });
 
+setInterval(function() {
+  io.sockets.emit('message', 'hi!');
+}, 1000);
