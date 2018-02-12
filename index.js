@@ -24,11 +24,15 @@ server.listen(PORT, function() {
 
 
 //SERVER SIDE CODE
-
 io.on('connection', function(socket) {
 
 	//RUNNING EACH INSTANCE FOR EVERY USER
-	
+
+	verbose(socket.id)
+	//READERS
+
+	//WRITERS
+
 
 
 });
@@ -36,3 +40,9 @@ io.on('connection', function(socket) {
 setInterval(function() {
   io.sockets.emit('message', 'hi!');
 }, 1000);
+
+
+//MISC FUNCTIONS
+function verbosea(args){
+	console.log(args)
+}
