@@ -27,8 +27,6 @@ server.listen(PORT, function() {
 io.on('connection', function(socket) {
 
 	//RUNNING EACH INSTANCE FOR EVERY USER
-
-	verbose(socket.id)
 	//READERS
 
 	//WRITERS
